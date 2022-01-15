@@ -18,7 +18,6 @@ defmodule GenReport.Parser do
     filename
     |>File.stream!()
     |>Stream.map(fn line -> parse_line(line) end)
-    |>Enum.each(fn line -> IO.inspect(line) end)
   end
 
   defp parse_line(line) do
